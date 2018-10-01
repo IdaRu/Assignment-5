@@ -1,0 +1,14 @@
+/Users/midava/Desktop/SelkäLoppu/assignment_3/bin/Debug/netcoreapp2.1/assignment_3.deps.json
+/Users/midava/Desktop/SelkäLoppu/assignment_3/bin/Debug/netcoreapp2.1/assignment_3.runtimeconfig.json
+/Users/midava/Desktop/SelkäLoppu/assignment_3/bin/Debug/netcoreapp2.1/assignment_3.runtimeconfig.dev.json
+/Users/midava/Desktop/SelkäLoppu/assignment_3/bin/Debug/netcoreapp2.1/assignment_3.dll
+/Users/midava/Desktop/SelkäLoppu/assignment_3/bin/Debug/netcoreapp2.1/assignment_3.pdb
+/Users/midava/Desktop/SelkäLoppu/assignment_3/obj/Debug/netcoreapp2.1/assignment_3.csprojAssemblyReference.cache
+/Users/midava/Desktop/SelkäLoppu/assignment_3/obj/Debug/netcoreapp2.1/assignment_3.csproj.CoreCompileInputs.cache
+/Users/midava/Desktop/SelkäLoppu/assignment_3/obj/Debug/netcoreapp2.1/assignment_3.RazorAssemblyInfo.cache
+/Users/midava/Desktop/SelkäLoppu/assignment_3/obj/Debug/netcoreapp2.1/assignment_3.RazorAssemblyInfo.cs
+/Users/midava/Desktop/SelkäLoppu/assignment_3/obj/Debug/netcoreapp2.1/assignment_3.AssemblyInfoInputs.cache
+/Users/midava/Desktop/SelkäLoppu/assignment_3/obj/Debug/netcoreapp2.1/assignment_3.AssemblyInfo.cs
+/Users/midava/Desktop/SelkäLoppu/assignment_3/obj/Debug/netcoreapp2.1/assignment_3.RazorTargetAssemblyInfo.cache
+/Users/midava/Desktop/SelkäLoppu/assignment_3/obj/Debug/netcoreapp2.1/assignment_3.dll
+/Users/midava/Desktop/SelkäLoppu/assignment_3/obj/Debug/netcoreapp2.1/assignment_3.pdb
