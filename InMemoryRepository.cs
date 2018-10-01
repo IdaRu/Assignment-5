@@ -131,5 +131,42 @@ namespace Assignment_3
                 return null;
             }
         }
+
+        public async Task<Player> UpdatePlayerName (Guid id, UpdatedPlayerName player)
+        {
+            await Task.CompletedTask;
+            Player found = GetPlayerById(id);
+            if (found != null)
+            {
+                found.Name = player.UpdatedName;
+            }
+            return found;
+        }
+
+        public async Task<Player[]> GetPlayerMoreScore (int minScore)
+        {
+            await Task.CompletedTask;
+            foreach (Player player in players)
+            {
+                if (player.Score > minScore)
+                {
+                    return new Player[] { player };
+                }
+            }
+            return null;
+        }
+
+        public async Task<Player[]> GetPlayerByTag(string tag)
+        {
+            await Task.CompletedTask;
+            foreach (Player player in players)
+            {
+                if (player.tag == tag)
+                {
+                    return new Player[] { player };
+                }
+            }
+            return null;
+        }
     }
 }

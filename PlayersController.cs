@@ -39,10 +39,28 @@ namespace Assignment_3
             return _processor.Modify(id, player);
         }
 
+        [HttpPut("{id:Guid/name}")]
+        public Task<Player> UpdateName(Guid id, [FromBody] UpdatedPlayerName player)
+        {
+            return _processor.UpdatePlayerName(id, player);
+        }
+
         [HttpDelete("{id:Guid}")]
         public Task<Player> Delete(Guid id)
         {
             return _processor.Delete(id);
+        }
+
+        [HttpGet]
+        public Task<Player[]> GetPlayerMoreScore ([FromQuery]int minScore)
+        {
+            return _processor.GetPlayerMoreScore(minScore);
+        }
+
+        [HttpGet("{tag}")]
+        public Task<Player[]> GetPlayerByTag(string tag)
+        {
+            return _processor.GetPlayerByTag(tag);
         }
     }
 }

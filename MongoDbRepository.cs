@@ -14,6 +14,7 @@ namespace Assignment_3
         private IMongoDatabase database;
         private IMongoCollection<Player> collection;
         public MongoDbRepository ()
+
         {
             var client = new MongoClient("mongodb://localhost:27017");
             var database = client.GetDatabase("game");
@@ -60,14 +61,12 @@ namespace Assignment_3
             return player2;
         }
 
-        private Player GetPlayerById(Guid id)
+        public async Task<Player> UpdatePlayerName(Guid id, UpdatedPlayerName player)
         {
-
-        }
-
-        private Item GetItemById(Guid playerid, Guid itemid) 
-        {
-
+            var filter = Builders<Player>.Filter.Eq("Id", id);
+            var update = Builders<Player>.Update.Set("NewName", player.UpdatedName);
+            var player2 = await collection.FindOneAndUpdateAsync(filter, update);
+            return player2;
         }
 
         public async Task<Item> CreateItem(Guid playerid, Item item)
@@ -140,6 +139,22 @@ namespace Assignment_3
             player.items.Remove(found);
             await collection.FindOneAndReplaceAsync(filter, player);
             return found;
+        }
+
+        public async Task<Player[]> GetPlayerMoreScore(int minScore)
+        {
+            var filter = Builders<Player>.Filter.Gt("Score", minScore);
+            var cursor = await collection.FindAsync(filter);
+            Player[] player = cursor.ToList().ToArray();
+            return player;
+        }
+
+        public async Task<Player[]> GetPlayerByTag(String tag)
+        {
+            var filter = Builders<Player>.Filter.Eq("tag", tag);
+            var cursor = await collection.FindAsync(filter);
+            var player = cursor.ToList();
+            return player.ToArray();
         }
     }
 }

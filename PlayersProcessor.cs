@@ -39,9 +39,24 @@ namespace Assignment_3
             return _repository.ModifyPlayer(id, player);
         }
 
+        public Task<Player> UpdatePlayerName(Guid id, UpdatedPlayerName player)
+        {
+            return _repository.UpdatePlayerName (id, player);
+        }
+
         public Task<Player> Delete(Guid id)
         {
             return _repository.DeletePlayer(id);
+        }
+
+        public Task<Player[]> GetPlayerMoreScore (int minScore)
+        {
+            return _repository.GetPlayerMoreScore(minScore);
+        }
+
+        public Task<Player[]> GetPlayerByTag(string tag)
+        {
+            return _repository.GetPlayerByTag(tag);
         }
     }
 }

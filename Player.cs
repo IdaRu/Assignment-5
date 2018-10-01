@@ -13,5 +13,6 @@ namespace Assignment_3
         public int Level { get; set; }
         public DateTime CreationTime { get; set; }
         public List <Item> items { get; set; }
+        public string tag { get; set; }
     }
 }
